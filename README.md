@@ -1,44 +1,43 @@
-# Phishing Awareness
+Phishing URl Downloader
+Overview
+This Python script is designed to download data from specified URLs and save it to text files. It uses the requests library to make HTTP GET requests, fetches data, and saves it to files. The filenames are generated dynamically based on the current date and time.
 
-Phishing is a type of cyber attack where attackers attempt to deceive individuals into providing sensitive information such as usernames, passwords, and financial details by posing as a trustworthy entity. The goal of phishing is to trick individuals into willingly disclosing their confidential information or performing actions that may compromise security.
+Requirements
+Python 3
+requests library (install it using pip install requests)
+Usage
+Clone or download this repository to your local machine.
 
-## Key Characteristics of Phishing Attacks:
+Install the required library:
 
-### 1. Deceptive Communication:
-Phishing attacks often involve deceptive communication, such as emails, messages, or websites designed to appear as if they are from a legitimate source.
+bash
+Copy code
+pip install requests
+Run the script:
 
-### 2. Impersonation:
-Attackers may impersonate well-known organizations, financial institutions, or trusted individuals to gain the trust of the target.
+bash
+Copy code
+python data_downloader.py
+Configuration
+Update the script with the URLs and filenames for the datasets you want to download.
 
-### 3. Email Phishing:
-The most common form of phishing involves sending fraudulent emails that mimic legitimate correspondence. These emails often contain links to fake websites or malicious attachments.
+python
+Copy code
+# URL and filename for the first dataset
+url1 = "https://phishunt.io/feed.txt"
+filename1 = "phishunt"
 
-### 4. Spear Phishing:
-In spear phishing, attackers target specific individuals or organizations. The messages are highly customized and may include personal information to increase their credibility.
+# URL and filename for the second dataset
+url2 = "https://openphish.com/feed.txt"
+filename2 = "openphish"
+Result
+The script will create text files containing the downloaded data. The filenames will include a timestamp for uniqueness.
 
-### 5. Smishing and Vishing:
-Phishing attacks may also occur through SMS (smishing) or voice calls (vishing), where attackers use text messages or phone calls to trick individuals into revealing sensitive information.
+Example filenames:
 
-### 6. Fake Websites:
-Phishers often create fake websites that mimic the appearance of legitimate sites. Victims may unknowingly enter their credentials or personal information on these fraudulent pages.
-
-### 7. Credential Harvesting:
-The primary objective of many phishing attacks is to harvest login credentials. Once obtained, attackers may use these credentials to gain unauthorized access to accounts.
-
-### 8. Financial Fraud:
-Some phishing attacks are designed to trick individuals into providing banking details or credit card information, leading to financial fraud.
-
-### 9. Malware Delivery:
-Phishing emails may contain malicious attachments or links that, when clicked, install malware on the victim's device. This malware can be used for various malicious purposes.
-
-### 10. Social Engineering:
-Phishing relies heavily on social engineering techniques to manipulate individuals into taking specific actions without questioning the legitimacy of the request.
-
-## Prevention Strategies:
-
-- **User Awareness:** Educate users about the risks and characteristics of phishing attacks.
-- **Security Measures:** Implement email filtering, multi-factor authentication, and other security measures.
-- **Vigilance:** Stay vigilant when interacting with online communication. Be cautious about clicking links and providing personal information.
-- **Education:** Regularly train individuals on best practices to recognize and avoid phishing attempts.
-
-Remember, being proactive and informed is crucial in the fight against phishing attacks. Stay cyber-aware and help create a more secure online environment.
+phishunt_2022-01-01_15-30-00.txt
+openphish_2022-01-01_15-35-00.txt
+Notes
+Ensure an active internet connection for successful data retrieval.
+The script uses the current date and time for filename uniqueness.
+Handle any potential errors gracefully, and refer to the console for status updates.
